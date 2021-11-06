@@ -1,0 +1,31 @@
+.fixed-pos-left{
+  position: fixed;
+  margin-left: 2%;
+  margin-top: 5px;
+  max-width: 400px;
+}
+
+  .input-group {
+    margin: auto;
+    border: 2px solid rgb(203, 235, 230);
+    padding: 0.5%;
+    border-radius: 10px;
+  }
+  
+  .btn-secondary {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    border: 1px solid rgb(203, 235, 230);
+    background:  rgb(203, 235, 230);
+    justify-self: end;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  ::placeholder{
+    color: rgba(0, 195, 195, 0.363);
+  }
+  

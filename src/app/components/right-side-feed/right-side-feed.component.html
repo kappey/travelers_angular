@@ -1,0 +1,10 @@
+<div class="fixed-pos">
+    <div>
+        <div #map id="map" class="my-google-map">
+            <google-map [options]="options" [height]="null" [width]="null">
+                <map-marker *ngFor="let m of markers" [position]="m.position" [label]="m.label" [icon]=m.icon>
+                </map-marker>
+            </google-map>
+        </div>
+    </div>
+</div>

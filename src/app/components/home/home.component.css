@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+    .left-box{
+      width: 50%;
+      height: 100vh;
+      left: 0px;
+      top: 0px;
+      background: #FCD213;
+    }
+
+    .center-txt{
+      margin-top: 30px;
+      text-align: center;
+      color:rgb(255, 255, 255);
+    }
+
+    a{
+      color: #FFFFFF;
+    }
+  
+    .logo-box{
+      margin: auto;
+      margin-top: 10%;
+      width: 80%;
+    }
+  
+    h1{
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 60px;
+    }
+  
+    .right-box{
+      width: 50%;
+      height: 100vh;
+      left: 0px;
+      top: 0px;
+      background-image: url("../../../assets/images/friends-girls.jpg");
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+  
+    

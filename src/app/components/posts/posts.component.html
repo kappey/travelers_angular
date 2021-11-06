@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+
+    <!-- Input trigger modal -->
+    <div class="form-control p-2 m-5 newPost text-muted" placeholder="Share your experiences..." data-bs-toggle="modal"
+        data-bs-target="#newPostModal">Share your experiences...</div>
+
+    <!-- Modal -->
+    <div class="modal fade justify-content-center" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title m-2" id="newPostModalLabel">Share your experiences</h5>
+                    <button type="button" class="btn btn-close btn-modal" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea #postC="ngModel" name=newPost rows="6" required type="text" [(ngModel)]="newPost.postContent"
+                                placeholder="write your posr here" class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-modal col-sm-3" data-bs-dismiss="modal" style="background-color: #00C0EB;"
+                            (click)=onPost()>Post</button>
+                    </div>
+                </div>
+                <img [src]="url" alt="">
+                <input type="file" (change)="selectFile($event)">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="row justify-content-sm-center">
+
+    <div class="card p-5 m-5" style="width: 25rem;">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <img src="../../../assets/travelersImages/buda-castle-surrounded-by-buildings-lights-during-night-budapest.jpg"
+            class="card-img" alt="...">
+    </div>
+
+    <div class="card p-5 m-5" style="width: 25rem;">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <img src="../../../assets/travelersImages/landscape-hallstatt-surrounded-by-water-rocky-mountains-during-rainy-day-austria.jpg"
+            class="card-img" alt="...">
+    </div>
+
+    <div class="card p-5 m-5" style="width: 25rem;">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <img src="../../../assets/travelersImages/aerial-shot-hallstatt-town-austria.jpg" class="card-img" alt="...">
+    </div>
+
+    <div class="card p-5 m-5" style="width: 25rem;">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <img src="../../../assets/travelersImages/landscape-hallstatt-surrounded-by-water-rocky-mountains-during-rainy-day-austria.jpg"
+            class="card-img" alt="...">
+    </div>
+
+    <div class="card p-5 m-5" style="width: 25rem;">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <img src="../../../assets/travelersImages/buda-castle-surrounded-by-buildings-lights-during-night-budapest.jpg"
+            class="card-img" alt="...">
+    </div>
+
+</div> -->

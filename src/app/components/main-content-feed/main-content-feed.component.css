@@ -1,0 +1,80 @@
+
+.card{
+    width: 46vw;
+    border-radius: 15px;
+    min-height: 240px;
+}
+
+.img-card {
+    min-height: 240px;
+    background-color: #00A1BB;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.date{
+    width: 60px;
+    height: 60px;
+    background-color: #EB6D7F;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img-meet {
+    height: 90px;
+    width: 90px;
+    background-color: #00A1BB;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+h6{
+font-size: small;
+padding-top: 3px;
+color: white;
+}
+
+.day{
+    margin-top: -10px;
+    font-size: 30px;
+    color: white;
+}
+
+.fa-pen{
+     color: #B1B1B1;
+}
+
+.fa-pen:hover{
+    color: #575757;
+}
+
+h5 {
+    white-space: pre-wrap;
+    color: #575757;
+    font-size: 18px;
+}
+
+.btn:focus {
+    box-shadow: none;
+  }
+
+.btn-like-on{
+    min-width: 25px;
+    min-height: 25px;
+    background-image: url("../../../assets/icons/likeOn.png");
+    background-size: cover;
+}
+
+.btn-like-off{
+    min-width: 25px;
+    min-height: 25px;
+    background-image: url("../../../assets/icons/likeOff.png");
+    background-size: cover;
+}

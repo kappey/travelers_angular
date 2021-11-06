@@ -1,0 +1,26 @@
+.wrapper {
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(95vh, auto);
+    
+  }
+
+  app-left-side-feed{
+    grid-column: 1;
+    border-radius: 25px 0px 0px 25px;
+    background-color: rgb(236, 250, 255);
+  }
+  app-main-content-feed{
+    grid-column: 2/4;
+    background-color: rgb(247, 253, 255);
+  }
+
+  app-right-side-feed{
+    grid-column: 4;
+    border-radius: 0px 25px 25px 0px;
+    background-color: rgb(236, 250, 255);
+  }

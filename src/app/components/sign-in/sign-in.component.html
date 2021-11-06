@@ -1,0 +1,9 @@
+<div class="form-disign">
+    <form #formInfo="ngForm">
+        <input #emailInfo="ngModel" required type="email" name="Email" id="Email"
+            class="form-control mb-4 round-input-box" [(ngModel)]="signIn.email" placeholder="E-mail">
+        <input #userPasswordInfo="ngModel" required type="password" name="Password" id="Password"
+            class="form-control mb-4 round-input-box" [(ngModel)]="signIn.password" placeholder="Password">
+        <button (click)="onSignIn()" type="submit" class="btn form-control btn-round">Sign In</button>
+    </form>
+</div>

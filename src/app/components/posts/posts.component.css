@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .newPost{
+      height: 40px;
+      max-width: 600px !important;
+  }
+
+  .newPost:hover{
+    border: 1px solid rgb(109, 109, 109);
+}
+
+  .modal-dialog {
+   margin-left: 35%;
+   box-shadow: none;
+  }
+
+  .btn-modal{
+      width: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 5px;
+  }
+
+  .btn:focus {
+    box-shadow: none;
+  }

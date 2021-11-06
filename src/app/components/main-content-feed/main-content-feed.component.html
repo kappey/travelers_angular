@@ -1,0 +1,89 @@
+<div style="max-height: 100px;">
+    <div class="row m-5 ms-3 mb-5 justify-content-between">
+        <div *ngFor="let traveler of travelers" class="col-md-2 col-sm-4 col-12 d-block">
+            <div routerLink='/{{traveler._id}}' class="img-meet m-3"
+                style="background-image: url(../../../assets/images/{{traveler._id}}.jpg);">
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-posts></app-posts>
+
+<div>
+    <div *ngFor="let post of posts" class="card border-0 p-1 mx-3 my-5">
+        <div class="row g-0">
+            <div class="col-md-5 img-card" style="background-image: url(http://localhost:3000{{post.path}});"></div>
+            <div class="col-md-7">
+                <div class="card-body mx-2">
+                    <div class="row g-0">
+                        <div class="col-2">
+                            <div class="date">
+                                <h6 class="monthAndYear">
+                                    {{post.date_created | date : 'MMM' }}
+                                    {{post.date_created | date : 'YY' }}
+                                </h6>
+                                <p class="day"> {{post.date_created | date : 'd' }}
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card-title col-8" style=" margin-left: 8px;">
+                            <h4 style="color: #00A1BB;">{{post.fullName}}</h4>
+                            <p class="card-text"><small class="text-muted">{{post.location?.city}},
+                                    {{post.location?.state}}</small></p>
+                        </div>
+                        <div class="dropdown col-1">
+                            <div *ngIf="post.traveler_id == validUser.traveler_id">
+                                <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><i class='fas fa-pen'></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <!-- <li><a class="dropdown-item" href="">Edit</a></li> -->
+                                    <li><a class="dropdown-item" (click)="deleteOneTraveler(post)" href="">Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h5 class="card-text my-3">{{post.postContent}}</h5>
+
+                        <div class="card-text">
+                            <button *ngIf="post.likes?.includes(validUser.traveler_id)" class="btn btn-like-on"
+                                (click)="onLike(post._id)" type="button" aria-expanded="false"></button>
+                            <button *ngIf="!post.likes?.includes(validUser.traveler_id)" class="btn btn-like-off"
+                                (click)="onLike(post._id)" type="button" aria-expanded="false"></button>
+
+                            <!-- If no one likes this opst -->
+                            <small *ngIf="post.likes?.length==0" class="text-muted"> Be the first to like this
+                                post</small>
+
+                            <!-- If the traveler likes this opst -->
+                            <small
+                                *ngIf="post.likes?.length != 0 && post.likes?.length != 1 && post.likes?.includes(validUser.traveler_id)"
+                                class="text-muted">You and
+                                {{post.likes?.length-1}}
+                                travelers liked this
+                                post</small>
+                            <small *ngIf="post.likes?.length == 1 && post.likes?.includes(validUser.traveler_id)"
+                                class="text-muted"> You liked this
+                                post</small>
+
+                            <!-- If the traveler does'nt likes this opst -->
+                            <small
+                                *ngIf="post.likes?.length != 0 && post.likes?.length != 1 && !post.likes?.includes(validUser.traveler_id)"
+                                class="text-muted">
+                                {{post.likes?.length}}
+                                travelers liked this
+                                post</small>
+                            <small *ngIf="post.likes?.length == 1 && !post.likes?.includes(validUser.traveler_id)"
+                                class="text-muted"> {{post.likes?.length}}
+                                traveler liked this
+                                post</small>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

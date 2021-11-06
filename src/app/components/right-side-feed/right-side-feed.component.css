@@ -1,0 +1,23 @@
+.fixed-pos{
+    position: fixed;
+    margin-left: 0.7vw;
+    margin-top: 10vh;
+}
+
+.my-google-map {
+    width: 23vw;
+    height: 44vh;
+    border-radius: 15px;
+    background-color:  rgb(204, 204, 204);
+}
+
+
+.my-google-map .map-container {
+    width: 23vw;
+    height: 40vh;
+    border-radius: 15px;
+    border: 8px solid rgb(204, 204, 204);
+    margin: auto;
+}
+
+
