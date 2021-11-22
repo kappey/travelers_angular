@@ -37,6 +37,7 @@ import { MainContentFeedComponent } from './components/main-content-feed/main-co
 import { MainContentProfileComponent } from './components/main-content-profile/main-content-profile.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { environment } from '../environments/environment';
     LeftSideFeedComponent,
     RightSideFeedComponent,
     MainContentFeedComponent,
-    MainContentProfileComponent
+    MainContentProfileComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

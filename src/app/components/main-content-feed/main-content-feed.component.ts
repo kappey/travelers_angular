@@ -25,8 +25,8 @@ export class MainContentFeedComponent implements OnInit {
   travelers:Traveler[] = [];
   traveler:Traveler = {};
   image:Image = {};
-  posts : Post[] = [];
-  validUser : any;
+  posts:Post[] = [];
+  validUser:any;
 
   constructor( 
     private travelerService: TravelerService,
@@ -118,7 +118,7 @@ getOneTraveler(traveler_id: any){
 deleteOneTraveler(post: Post){
   let deletedPost: Post;
   let deletedimage: Image;
-  if (confirm('Are you sure you want to delet this post?')) {
+  if (confirm('Are you sure you want to delete this post?')) {
     this.postService.deletePost(post._id)
   .subscribe(
     res => {
